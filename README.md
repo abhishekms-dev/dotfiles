@@ -1,7 +1,7 @@
 
 # Dotfiles — Hyprland Rice
 
-#Showcase
+Showcase
 https://github.com/user-attachments/assets/b25ef328-5519-4761-ac41-82d0e3ea2a86
 
 ## Stack
