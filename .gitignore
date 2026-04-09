@@ -1,0 +1,9 @@
+cat > ~/dotfiles/.gitignore << 'EOF'
+*.log
+*~
+*.swp
+.DS_Store
+# Matugen output (auto-generated, not hand-written)
+waybar/colors.css
+swaync/colors/colors.css
+EOF

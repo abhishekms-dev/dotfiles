@@ -1,0 +1,36 @@
+[config.wallpaper]
+command = "awww img {{image}} --transition-type random --transition-duration 1.5 --transition-fps 144"
+set = true
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/waybar.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi.rasi'
+output_path = '~/.config/rofi/shared/colors.rasi'
+
+[templates.swaync]
+input_path = '~/.config/matugen/templates/swaync.css'
+output_path = '~/.config/swaync/colors/colors.css'
+post_hook = 'swaync-client --reload-css'
+
+[templates.gtk]
+input_path = '~/.config/matugen/templates/gtk.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+post_hook = ''
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk.css'
+output_path = '~/.config/gtk-4.0/gtk.css'
+post_hook = ''
+
+[templates.kdeglobals]
+input_path = '~/.config/matugen/templates/kdeglobals.ini'
+output_path = '~/.config/kdeglobals'
+post_hook = ''
+
+# DONT ASK COLOR OPTIONS
+[config]
+show_color_options = false

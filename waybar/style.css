@@ -1,0 +1,67 @@
+@import "colors.css";
+* {
+    all: unset;
+    font-family: "Google Sans Flex", "Symbols Nerd Font";
+}
+
+.modules-center {
+    background-color: @bg1;
+    padding: 6px 18px;
+    border-radius: 99px;
+}
+
+tooltip {
+    background-color: @bg1;
+    color: @fg;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+#clock {
+    font-weight: 500;
+}
+
+#workspaces {
+    background-color: @bg2;
+    padding: 2px 4px;
+    margin: 1px 0;
+    border-radius: 99px;
+}
+
+#workspaces button {
+    background-color: @bg3;
+    padding: 2px 4px;
+    transition: all 300ms ease-in-out;
+    margin: 0 2px;
+    min-width: 10px;
+    border-radius: 99px;
+}
+
+#workspaces button.active {
+    background-color: @green;
+    min-width: 1.5rem;
+    font-weight: 700;
+    color: black;
+}
+
+#memory {
+    color: @green;
+}
+
+#bluetooth {
+    color: @blue;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+#bluetooth.on,
+#bluetooth.connected {
+    color: whitesmoke;
+}
+
+#custom-controlcenter {
+    color: @green;
+    font-weight: 500;
+    font-size: 1.2rem;
+}

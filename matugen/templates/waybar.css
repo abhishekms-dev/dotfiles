@@ -1,0 +1,9 @@
+@define-color bg0 {{colors.background.default.hex}};
+@define-color bg1 {{colors.surface.default.hex}};
+@define-color bg2 {{colors.surface_variant.default.hex}};
+@define-color bg3 {{colors.secondary_container.default.hex}};
+@define-color bg4 {{colors.outline_variant.default.hex}};
+@define-color fg   {{colors.on_background.default.hex}};
+@define-color green {{colors.primary.default.hex}};
+@define-color blue  {{colors.tertiary.default.hex}};
+@define-color yellow {{colors.secondary.default.hex}};

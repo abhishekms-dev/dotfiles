@@ -1,0 +1,95 @@
+{
+  "exclusive:": false,
+  "spacing": 18,
+  "margin-top": 10,
+  "modules-center": [
+    "clock",
+    "hyprland/workspaces",
+    "memory",
+    "pulseaudio",
+    "bluetooth",
+    "custom/controlcenter",
+    "network",
+  ],
+
+  "clock": {
+    "interval": 60,
+    "format": "{:%H:%M}",
+    "tooltip": false,
+  },
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "active": "",
+      "default": "",
+    },
+    "persistent-workspaces": {
+      "*": 5, // 5 workspaces by default on every monitor
+    },
+  },
+
+  "memory": {
+    "interval": 30,
+    "format": "󰍛  {}% ",
+    "max-length": 10,
+  },
+
+  "custom/controlcenter": {
+    "format": "󰹯",
+    "on-click": "~/.config/rofi/controlcenter.sh",
+    "tooltip": false,
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "Muted ",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""],
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"],
+  },
+
+  "bluetooth": {
+    "format": "󰂲",
+    "format-on": " ",
+    "format-off": " ",
+    "format-connected": "{device_alias}",
+    "format-connected-battery": "󰂱 {device_alias} {device_battery_percentage}% {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+
+    "on-click": "bluetoothctl show | grep -q 'Powered: yes' && bluetoothctl power off || bluetoothctl power on",
+  },
+
+  "network": {
+    "interface": "wlan0",
+    "format": "{ifname}",
+    "format-wifi": "{icon}",
+    "format-icons": ["󰤯", "󰤟", "󰤥", "󰤨"],
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} {icon}",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+  },
+}
