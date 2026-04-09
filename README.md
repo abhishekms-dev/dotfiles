@@ -1,4 +1,4 @@
-cat > ~/dotfiles/README.md << 'EOF'
+
 # Dotfiles — Hyprland Rice
 
 #Showcase
